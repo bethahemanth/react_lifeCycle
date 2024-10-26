@@ -96,16 +96,39 @@ import React, { useState } from "react";
 // export default App;
 // App.jsx
 // import React from "react";
-import UseEffectCounters from "./assets/components/Api/Counters";
-import "./App.css";
+// import UseEffectCounters from "./assets/components/Api/Counters";
+// import "./App.css";
 
-function App() {
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>Counter Management App</h1>
+//       <UseEffectCounters />
+//     </div>
+//   );
+// }
+
+// export default App;
+// App.jsx
+// import React from "react";
+import InputFocus from "./assets/components/FormInputs/inputFocus";
+
+const App = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert("Form submitted!");
+  };
+
   return (
     <div className="App">
-      <h1>Counter Management App</h1>
-      <UseEffectCounters />
+      <h1>Auto Focus Form</h1>
+      <form onSubmit={handleSubmit}>
+        <InputFocus />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
-}
+};
 
 export default App;
+
